@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<style>
+#particles-js{
+background:white;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+ h1{
+position: absolute;
+    width: 100%;
+    color:black;
+        margin-top: 300px;
+    font-size: 80px;
+}
+.container{
+    position:absolute;
+    width: 1000px;
+    height: 700px;
+margin-left:200px ;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.element{
+    color:#4CAF50;
+}
+</style>
+
+
+<body>
+    
+    <div id="particles-js">
+
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="/api/About/contact">Contact</a></li>
+            <li><a href="/api/User/send">About</a></li>
+            <li><a href="/Experience">Experience</a></li>
+
+          </ul>
+            <h1>I'm a <span class="element"></span> </h1>
+
+
+            <!-- <div class=container>
+
+                <canvas id="myChart"></canvas>
+        
+            </div> -->
+    </div>
+
+
+   
+
+
+  
+</body>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<script type="text/javascript" src="/particles.js"></script>
+<script type="text/javascript" src="/app.js"></script>
+
+<script>
+       
+var typed = new Typed('.element', {
+  strings: ['Web developer', 'Java developer','Android developer','Node developer'],
+typeSpeed:40,
+backSpeed:40,
+loop:true
+});
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ['Java', 'Node js', 'Javascript', 'Android', 'Spring'],
+        options: {
+        animation: {
+            onProgress: function(animation) {
+                progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
+            }
+        }
+    },
+        datasets: [{
+            backgroundColor: [
+                'rgb(34,139,34)',
+                'rgba(54, 162, 235)',
+                'rgba(255, 159, 64)'
+ ,
+                'rgba(75, 192, 192)',
+                'rgba(153, 102, 255 )'
+],
+            data: [60,55,50,50,10]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+
+</script>
+
+
+</html>
+
